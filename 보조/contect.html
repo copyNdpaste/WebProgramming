@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <title>ChuSarang</title>
+    <link rel="stylesheet" href="../css.css">
+</head>
+<body class="noajax home">
+    <div class="menu"><a data-effect="effect" class="btnCloseNav" aria-hidden="true"><span class="l1"></span><span class="l2"></span><span class="l3"></span></a></div>
+    <div id="container" class="container effect">
+        <nav class="main_menu effect" role="navigation" aria-label="Site">
+            <span class="close"></span>
+            <ul>
+                <li class="lang-picker" aria-label="Choose a Language">
+                    <a href="#" >Category ∨<span class="lang-arrow"></span></a>
+                    <ul>
+                        <li><a href="morePage_rest.html">Food</a></li>
+                        <li><a href="morePage_fashion.html">Fashion</a></li>
+                        <li><a href="morePage_coding.html">Programming</a></li>
+                        <li><a href="MorePage.html">Competition</a></li>
+                        <li><a href="morePage_tour.html">Travel</a></li>
+                    </ul>
+                </li>
+                <li ><a class="btnAjax" href="../main.html" data-title="" data-url="">Main</a><span class="menu_overlay"></span></li>
+                <li ><a class="btnAjax " href="intro.html" data-title="" data-url="/project">Introduction</a><span class="menu_overlay "></span></li>
+                <li ><a class="btnAjax " href="port.html">PortFolio</a><span class="menu_overlay "></span></li>
+                <li ><a class="btnAjax" href="question.html"><span>Question</span></a><span class="menu_overlay"></span></li>
+                <li ><a class="btnAjax  active"><span>Contact</span></a><span class="menu_overlay active"></span></li>  
+                <li ><img src = "../image/Mark.png" width ="300" height = "130"></a></li>   
+            </ul>
+        </nav>
+
+<div class="pusher">
+    <div class="loadContent current">
+        <div id="content" class="how">
+          <div id="preload" aria-hidden="true"></div>
+            <div class="inner">
+                <header class="title" role="banner">
+                  <div class="browserVersion newBrowser">
+                <h1>ChuSarang</h1>
+                <p>유저들을 위한 맞춤형 추천 사이트</p>
+            </div>
+                </header>
+
+
+    <br><br><br><br><br><br><br><br><br>
+<center>
+    <div id = "state">
+        <h1>ConTact</h1>
+        <br><br><br><br><br><br>
+        <div id="map" style="width:100%;height:400px;"></div>
+
+<script>
+function myMap() {
+  var YD = new google.maps.LatLng(36.623761, 127.459984);
+  var HY = new google.maps.LatLng(36.625069,127.457247);
+  var S1 = new google.maps.LatLng(36.625560, 127.455781);
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {center: YD, zoom: 16};
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  var marker_YD = new google.maps.Marker({
+      position:YD,
+          draggable: true,
+          animation: google.maps.Animation.DROP
+   });
+   var marker_HY = new google.maps.Marker({
+      position:HY,
+                draggable: true,
+          animation: google.maps.Animation.DROP
+   });
+   var marker_S1 = new google.maps.Marker({
+      position:S1,
+                draggable: true,
+          animation: google.maps.Animation.DROP
+   });
+   
+   marker_YD.setMap(map);
+   marker_HY.setMap(map);
+   marker_S1.setMap(map);
+
+   var YD_Range = new google.maps.Circle({
+      center: YD,
+      radius: 100,
+      strokeColor: "rgb(170,170,170)",
+      strokeOpacity: 0.5,
+      strokeWeight: 5,
+      fillColor: "rgb(170,170,170)",
+      fillOpacity: 0.4
+   });
+   var HY_Range = new google.maps.Circle({
+      center: HY,
+      radius: 100,
+      strokeColor: "rgb(170,170,170)",
+      strokeOpacity: 0.5,
+      strokeWeight: 5,
+      fillColor: "rgb(170,170,170)",
+      fillOpacity: 0.4
+   });
+   var S1_Range = new google.maps.Circle({
+      center: S1,
+      radius: 100,
+      strokeColor: "rgb(170,170,170)",
+      strokeOpacity: 0.5,
+      strokeWeight: 5,
+      fillColor: "rgb(170,170,170)",
+      fillOpacity: 0.4
+   });
+   YD_Range.setMap(map);
+   HY_Range.setMap(map);
+   S1_Range.setMap(map);
+   var infowindow_YD = new google.maps.InfoWindow({
+      content: "This is a dormitory"
+   });
+   google.maps.event.addListener(marker_HY,'click',function() {
+       if (marker_HY.getAnimation() == null) {
+            marker_HY.setAnimation(google.maps.Animation.BOUNCE);
+          }
+        map.setZoom(18);
+        map.setCenter(marker_HY.getPosition());
+        var infowindow_HY = new google.maps.InfoWindow({
+      content: '<img src = "HY.png"> '+"<br>"+'CGAC' + "<br>" + "Sammaru"
+    });
+            infowindow_HY.open(map,marker_HY);
+        window.setTimeout(function() {map.setZoom(pos); infowindow.close(); marker.setAnimation(null);},1000);
+    });
+
+    google.maps.event.addListener(marker_S1,'click',function() {
+        if (marker_S1.getAnimation() == null) {
+            marker_S1.setAnimation(google.maps.Animation.BOUNCE);
+          }
+          map.setZoom(18);
+          map.setCenter(marker_S1.getPosition());
+    var infowindow_S1 = new google.maps.InfoWindow({
+      content: '<img src = "S1.png">'+"<br>"+'Emsys'
+    });
+            infowindow_S1.open(map,marker_S1);
+    });
+     map.setTilt(100);
+   infowindow_YD.open(map,marker_YD);
+   window.setTimeout(function() {map.setZoom(pos); infowindow.close(); marker.setAnimation(null);},1000);
+}
+</script>
+      <br><br><br><br>
+<img src="img/line.jpg" width="1400">
+	<div id="page4" class="container">
+		<p><img src="img/mail.jpg" width="50" height="50"><strong><br>kss9409 @ naver.com<br>rile1036 @ naver.com<br>julsnutini @ naver.com</strong>
+		</p>
+		<img src="img/phone.jpg" width="50" height="55"><br> <strong>010 - 5830 - 2714<br>010 - 9910 - 7472<br>010 - 5109 - 0202</strong>
+		<br>
+		<br>
+	</div>
+        </div>
+        <br><br><br><br><br><br>
+
+	</center>
+    </div>
+</div>
+</div>
+</div>
+
+            
+
+    </div>
+    <script src="http://outdatedbrowser.com/public/scripts/jquery-1.10.1.min.js"></script>
+    <script src="http://outdatedbrowser.com/public/scripts/outdatedBrowser.min.js"></script>
+    <script src="http://outdatedbrowser.com/public/scripts/xDomainRequest.js"></script>
+      <script type="text/javascript" src="http://outdatedbrowser.com/public/scripts/main.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdWbRXcCwsE-4cn5ygGvRj-QqZCVl23KE&callback=myMap"></script> 
+    </body>
+</html>

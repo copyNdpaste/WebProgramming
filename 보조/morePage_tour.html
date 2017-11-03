@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ChuSarang</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="morePage_tour.css">
+  <link rel="stylesheet" type="text/css" href="jcarousel.responsive.css">
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="jquery.jcarousel.min.js"></script>
+  <script type="text/javascript" src="jcarousel.responsive.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+ <!-- 스크롤바 애니메이션 -->
+  <script>
+  $(document).ready(function(){
+    // Add smooth scrolling to all links in navbar + footer link
+    $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
+
+        // Store hash
+        var hash = this.hash;
+
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 900, function(){
+
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+        });
+      } // End if
+    });
+
+    $(window).scroll(function() {
+      $(".slideanim").each(function(){
+        var pos = $(this).offset().top;
+
+        var winTop = $(window).scrollTop();
+          if (pos < winTop + 600) {
+            $(this).addClass("slide");
+          }
+      });
+    });
+  })
+  </script>
+
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <!-- 추사랑 링크에 홈페이지 주소 연결///////////////////////////////// -->
+        <a class="navbar-brand" href="../main.html" style="font-size:20px">ChuSaRang</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active" style="font-size:20px"><a href="#HighRated">High Rated</a></li>
+          <li><a href="#Popular" style="font-size:20px">Popular</a></li>
+          <li><a href="#Newest" style="font-size:20px">Newest</a></li>
+          <li><a href="#Review" style="font-size:20px">Review</a></li>
+        </ul>
+      
+      </div>
+    </div>
+  </nav>
+
+  <div class="jumbotron text-center">
+    <img class="bannerimage" src="image/tour.png" style="width:100%; height:100%">
+    <!-- <h1 class="">[공모전] 검색</h1>
+    <br>
+    <form class="">
+      <div class="col-sm-7">
+      </div>
+      <div class="input-group col-sm-5">
+        <input type="search" class="form-control" size="20" placeholder="검색어(URL, 이름, Tag)" required>
+        <div class="input-group-btn">
+          <button type="button" class="btn btn-danger">Subscribe</button>
+        </div>
+      </div>
+    </form> -->
+  </div>
+
+  <!-- 1. 별점순 -->
+  <div id="HighRated" class="container-fluid text-center bg-grey">
+    <div class="wrapper slideanim" style="background-color:white">
+      <h1 class="text-left">High Rated</h1>
+      <div class="jcarousel-wrapper">
+        <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+        <div class="jcarousel">
+              <ul>
+                <li>
+                  <div class="thumbnail">
+                    <img class="siteImage" src="img/에어비앤비.png" alt="Image 1">
+                    <div class="text-left">
+                      <br><br><br>
+                      <p>
+                        <b>Name : </b>
+                        <font color:"#ff3300">Air B&B</font>
+                      </p>
+                      <p>
+                        <b>Tag :</b>
+                        <font color="#cc00ff">#여행 &nbsp;&nbsp;#경험 &nbsp;&nbsp;#연인끼리 &nbsp;&nbsp;#꿀경치</font>
+                      </p>
+                      <p>
+                        <b>URL :</b>
+                        <a href="https://www.airbnb.co.kr/">https://www.airbnb.co.kr/</a>
+                      </p>
+                      <p>
+                        <b>Visited : </b>28
+                      </p>
+                      <p>
+                        <b>Recomended : </b>24
+                      </p>
+                      <p>
+                        <img class="siteImage" src="image/5star.png" style="width:35%"alt=""/>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="thumbnail">
+                    <img class="siteImage" src="img/스카이스캐너.png" alt="Image 1">
+                    <div class="text-left">
+                      <br><br><br>
+                      <p>
+                        <b>Name : </b>
+                        <font color:"#ff3300">Sky Scanner</font>
+                      </p>
+                      <p>
+                        <b>Tag :</b>
+                        <font color="#cc00ff">#인기도착지 &nbsp;&nbsp;#편도 &nbsp;&nbsp;#렌터 &nbsp;&nbsp;#호텔</font>
+                      </p>
+                      <p>
+                        <b>URL :</b>
+                        <a href="https://www.skyscanner.co.kr/">https://www.skyscanner.co.kr/</a>
+                      </p>
+                      <p>
+                        <b>Visited : </b>30
+                      </p>
+                      <p>
+                        <b>Recomended : </b>23
+                      </p>
+                      <p>
+                        <img src="image/4star.png" style="width:35%"alt=""/>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="thumbnail">
+                    <img class="siteImage" src="img/트립어드바이저.png" alt="Image 1">
+                    <div class="text-left">
+                      <br><br><br>
+                      <p>
+                        <b>Name : </b>
+                        <font color:"#ff3300">Trip Advisor</font>
+                      </p>
+                      <p>
+                        <b>Tag :</b>
+                        <font color="#cc00ff">#호텔최저가 &nbsp;&nbsp;#풍부한정보 &nbsp;&nbsp;#좋은예약</font>
+                      </p>
+                      <p>
+                        <b>URL :</b>
+                        <a href="https://www.tripadvisor.co.kr/">https://www.tripadvisor.co.kr/</a>
+                      </p>
+                      <p>
+                        <b>Visited : </b>17
+                      </p>
+                      <p>
+                        <b>Recomended : </b>13
+                      </p>
+                      <p>
+                        <img src="image/4star.png" style="width:35%"alt=""/>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="thumbnail">
+                    <img class="siteImage" src="img/와이페이모어.png" alt="Image 1">
+                    <div class="text-left">
+                      <br><br><br>
+                      <p>
+                        <b>Name : </b>
+                        <font color:"#ff3300">WhyPayMore</font>
+                      </p>
+                      <p>
+                        <b>Tag :</b>
+                        <font color="#cc00ff">#추천기획 &nbsp;&nbsp;#저렴의끝 &nbsp;&nbsp;#유레일</font>
+                      </p>
+                      <p>
+                        <b>URL :</b>
+                        <a href="http://www.whypaymore.co.kr/">http://www.whypaymore.co.kr/</a>
+                      </p>
+                      <p>
+                        <b>Visited : </b>10
+                      </p>
+                      <p>
+                        <b>Recomended : </b>5
+                      </p>
+                      <p>
+                        <img src="image/2star.png" style="width:35%"alt=""/>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="thumbnail">
+                    <img class="siteImage" src="img/아고다.png" alt="Image 1">
+                    <div class="text-left">
+                      <br><br><br>
+                      <p>
+                        <b>Name : </b>
+                        <font color:"#ff3300">Agoda</font>
+                      </p>
+                      <p>
+                        <b>Tag :</b>
+                        <font color="#cc00ff">#호텔예약 &nbsp;&nbsp;#후기모음 &nbsp;&nbsp;#연중무휴</font>
+                      </p>
+                      <p>
+                        <b>URL :</b>
+                        <a href="https://www.agoda.com/ko-kr?cid=1719676">https://www.agoda.com/ko-kr?cid=1719676</a>
+                      </p>
+                      <p>
+                        <b>Visited : </b>12
+                      </p>
+                      <p>
+                        <b>Recomended : </b>3
+                      </p>
+                      <p>
+                        <img src="image/2star.png" style="width:35%"alt=""/>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+          </div>
+        <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+        <p class="jcarousel-pagination"></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="empty"></div>
+
+  <!-- 2. 조회순 -->
+  <div id="Popular" class="container-fluid text-center bg-grey">
+    <div class="wrapper slideanim" style="background-color:white">
+      <h1 class="text-left">Popular</h1>
+      <div class="jcarousel-wrapper">
+        <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+        <div class="jcarousel">
+              <ul>
+                <li>
+                  <div class="thumbnail">
+                    <img class="siteImage" src="img/스카이스캐너.png" alt="Image 1">
+                    <div class="text-left">
+                      <br><br><br>
+                      <p>
+                        <b>Name : </b>
+                        <font color:"#ff3300">Sky Scanner</font>
+                      </p>
+                      <p>
+                        <b>Tag :</b>
+                        <font color="#cc00ff">#인기도착지 &nbsp;&nbsp;#편도 &nbsp;&nbsp;#렌터 &nbsp;&nbsp;#호텔</font>
+                      </p>
+                      <p>
+                        <b>URL :</b>
+                        <a href="https://www.skyscanner.co.kr/">https://www.skyscanner.co.kr/</a>
+                      </p>
+                      <p>
+                        <b>Visited : </b>30
+                      </p>
+                      <p>
+                        <b>Recomended : </b>23
+                      </p>
+                      <p>
+                        <img src="image/4star.png" style="width:35%"alt=""/>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="thumbnail">
+                    <img class="siteImage" src="img/에어비앤비.png" alt="Image 1">
+                    <div class="text-left">
+                      <br><br><br>
+                      <p>
+                        <b>Name : </b>
+                        <font color:"#ff3300">Air B&B</font>
+                      </p>
+                      <p>
+                        <b>Tag :</b>
+                        <font color="#cc00ff">#여행 &nbsp;&nbsp;#경험 &nbsp;&nbsp;#연인끼리 &nbsp;&nbsp;#꿀경치</font>
+                      </p>
+                      <p>
+                        <b>URL :</b>
+                        <a href="https://www.airbnb.co.kr/">https://www.airbnb.co.kr/</a>
+                      </p>
+                      <p>
+                        <b>Visited : </b>28
+                      </p>
+                      <p>
+                        <b>Recomended : </b>24
+                      </p>
+                      <p>
+                        <img class="siteImage" src="image/5star.png" style="width:35%"alt=""/>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="thumbnail">
+                    <img class="siteImage" src="img/트립어드바이저.png" alt="Image 1">
+                    <div class="text-left">
+                      <br><br><br>
+                      <p>
+                        <b>Name : </b>
+                        <font color:"#ff3300">Trip Advisor</font>
+                      </p>
+                      <p>
+                        <b>Tag :</b>
+                        <font color="#cc00ff">#호텔최저가 &nbsp;&nbsp;#풍부한정보 &nbsp;&nbsp;#좋은예약</font>
+                      </p>
+                      <p>
+                        <b>URL :</b>
+                        <a href="https://www.tripadvisor.co.kr/">https://www.tripadvisor.co.kr/</a>
+                      </p>
+                      <p>
+                        <b>Visited : </b>17
+                      </p>
+                      <p>
+                        <b>Recomended : </b>13
+                      </p>
+                      <p>
+                        <img src="image/4star.png" style="width:35%"alt=""/>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="thumbnail">
+                    <img class="siteImage" src="img/아고다.png" alt="Image 1">
+                    <div class="text-left">
+                      <br><br><br>
+                      <p>
+                        <b>Name : </b>
+                        <font color:"#ff3300">Agoda</font>
+                      </p>
+                      <p>
+                        <b>Tag :</b>
+                        <font color="#cc00ff">#호텔예약 &nbsp;&nbsp;#후기모음 &nbsp;&nbsp;#연중무휴</font>
+                      </p>
+                      <p>
+                        <b>URL :</b>
+                        <a href="https://www.agoda.com/ko-kr?cid=1719676">https://www.agoda.com/ko-kr?cid=1719676</a>
+                      </p>
+                      <p>
+                        <b>Visited : </b>12
+                      </p>
+                      <p>
+                        <b>Recomended : </b>3
+                      </p>
+                      <p>
+                        <img src="image/2star.png" style="width:35%"alt=""/>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="thumbnail">
+                    <img class="siteImage" src="img/와이페이모어.png" alt="Image 1">
+                    <div class="text-left">
+                      <br><br><br>
+                      <p>
+                        <b>Name : </b>
+                        <font color:"#ff3300">WhyPayMore</font>
+                      </p>
+                      <p>
+                        <b>Tag :</b>
+                        <font color="#cc00ff">#추천기획 &nbsp;&nbsp;#저렴의끝 &nbsp;&nbsp;#유레일</font>
+                      </p>
+                      <p>
+                        <b>URL :</b>
+                        <a href="http://www.whypaymore.co.kr/">http://www.whypaymore.co.kr/</a>
+                      </p>
+                      <p>
+                        <b>Visited : </b>10
+                      </p>
+                      <p>
+                        <b>Recomended : </b>5
+                      </p>
+                      <p>
+                        <img src="image/2star.png" style="width:35%"alt=""/>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+          </div>
+        <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+        <p class="jcarousel-pagination"></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="empty"></div>
+
+  <!-- 3. 최신순 -->
+  <div id="Newest" class="container-fluid text-center bg-grey">
+    <div class="wrapper slideanim" style="background-color:white">
+      <h1 class="text-left">Newest</h1>
+      <div class="jcarousel-wrapper">
+        <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+        <div class="jcarousel">
+              <ul>
+                <li>
+                  <div class="thumbnail">
+                    <img class="siteImage" src="img/아고다.png" alt="Image 1">
+                    <div class="text-left">
+                      <br><br><br>
+                      <p>
+                        <b>Name : </b>
+                        <font color:"#ff3300">Agoda</font>
+                      </p>
+                      <p>
+                        <b>Tag :</b>
+                        <font color="#cc00ff">#호텔예약 &nbsp;&nbsp;#후기모음 &nbsp;&nbsp;#연중무휴</font>
+                      </p>
+                      <p>
+                        <b>URL :</b>
+                        <a href="https://www.agoda.com/ko-kr?cid=1719676">https://www.agoda.com/ko-kr?cid=1719676</a>
+                      </p>
+                      <p>
+                        <b>Visited : </b>12
+                      </p>
+                      <p>
+                        <b>Recomended : </b>3
+                      </p>
+                      <p>
+                        <img src="image/2star.png" style="width:35%"alt=""/>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="thumbnail">
+                    <img class="siteImage" src="img/와이페이모어.png" alt="Image 1">
+                    <div class="text-left">
+                      <br><br><br>
+                      <p>
+                        <b>Name : </b>
+                        <font color:"#ff3300">WhyPayMore</font>
+                      </p>
+                      <p>
+                        <b>Tag :</b>
+                        <font color="#cc00ff">#추천기획 &nbsp;&nbsp;#저렴의끝 &nbsp;&nbsp;#유레일</font>
+                      </p>
+                      <p>
+                        <b>URL :</b>
+                        <a href="http://www.whypaymore.co.kr/">http://www.whypaymore.co.kr/</a>
+                      </p>
+                      <p>
+                        <b>Visited : </b>10
+                      </p>
+                      <p>
+                        <b>Recomended : </b>5
+                      </p>
+                      <p>
+                        <img src="image/2star.png" style="width:35%"alt=""/>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="thumbnail">
+                    <img class="siteImage" src="img/트립어드바이저.png" alt="Image 1">
+                    <div class="text-left">
+                      <br><br><br>
+                      <p>
+                        <b>Name : </b>
+                        <font color:"#ff3300">Trip Advisor</font>
+                      </p>
+                      <p>
+                        <b>Tag :</b>
+                        <font color="#cc00ff">#호텔최저가 &nbsp;&nbsp;#풍부한정보 &nbsp;&nbsp;#좋은예약</font>
+                      </p>
+                      <p>
+                        <b>URL :</b>
+                        <a href="https://www.tripadvisor.co.kr/">https://www.tripadvisor.co.kr/</a>
+                      </p>
+                      <p>
+                        <b>Visited : </b>17
+                      </p>
+                      <p>
+                        <b>Recomended : </b>13
+                      </p>
+                      <p>
+                        <img src="image/4star.png" style="width:35%"alt=""/>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="thumbnail">
+                    <img class="siteImage" src="img/스카이스캐너.png" alt="Image 1">
+                    <div class="text-left">
+                      <br><br><br>
+                      <p>
+                        <b>Name : </b>
+                        <font color:"#ff3300">Sky Scanner</font>
+                      </p>
+                      <p>
+                        <b>Tag :</b>
+                        <font color="#cc00ff">#인기도착지 &nbsp;&nbsp;#편도 &nbsp;&nbsp;#렌터 &nbsp;&nbsp;#호텔</font>
+                      </p>
+                      <p>
+                        <b>URL :</b>
+                        <a href="https://www.skyscanner.co.kr/">https://www.skyscanner.co.kr/</a>
+                      </p>
+                      <p>
+                        <b>Visited : </b>30
+                      </p>
+                      <p>
+                        <b>Recomended : </b>23
+                      </p>
+                      <p>
+                        <img src="image/4star.png" style="width:35%"alt=""/>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="thumbnail">
+                    <img class="siteImage" src="img/에어비앤비.png" alt="Image 1">
+                    <div class="text-left">
+                      <br><br><br>
+                      <p>
+                        <b>Name : </b>
+                        <font color:"#ff3300">Air B&B</font>
+                      </p>
+                      <p>
+                        <b>Tag :</b>
+                        <font color="#cc00ff">#여행 &nbsp;&nbsp;#경험 &nbsp;&nbsp;#연인끼리 &nbsp;&nbsp;#꿀경치</font>
+                      </p>
+                      <p>
+                        <b>URL :</b>
+                        <a href="https://www.airbnb.co.kr/">https://www.airbnb.co.kr/</a>
+                      </p>
+                      <p>
+                        <b>Visited : </b>28
+                      </p>
+                      <p>
+                        <b>Recomended : </b>24
+                      </p>
+                      <p>
+                        <img class="siteImage" src="image/5star.png" style="width:35%"alt=""/>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+          </div>
+        <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+        <p class="jcarousel-pagination"></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="empty"></div>
+
+  <!-- 4. 이야기방 -->
+  <div id="Review" class="container-fluid text-center bg-grey">
+    <div class="wrapper slideanim" style="background-color:white">
+      <h1 class="text-left">Review</h1>
+      <div class="row2 content text-left">
+          <h4 class="text-left">Leave a Comment:</h4>
+          <form role="form">
+            <div class="form-group">
+              <textarea class="form-control" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+          </form>
+          <br><br>
+
+          <p><span class="badge">2</span> Comments:</p><br>
+
+          <div class="row">
+            <div class="col-sm-2 text-right">
+              <img src="https://www.hk.artsfestival.org/common/images/profile.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+            </div>
+            <div class="col-sm-10  text-left">
+              <h4 style="text-align:left">Anja <small>Sep 29, 2015, 9:12 PM</small></h4>
+              <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <br>
+            </div>
+            <div class="col-sm-2 text-right">
+              <img src="https://www.hk.artsfestival.org/common/images/profile.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+            </div>
+            <div class="col-sm-10 text-left">
+              <h4 style="text-align:left">John Row <small>Sep 25, 2015, 8:25 PM</small></h4>
+              <p>I am so happy for you man! Finally. I am looking forward to read about your trendy life. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <br>
+              <p><span class="badge">1</span> Comment:</p><br>
+              <div class="row">
+                <div class="col-sm-2 text-right">
+                  <img src="https://www.hk.artsfestival.org/common/images/profile.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+                </div>
+                <div class="col-xs-10 text-left">
+                  <h4 style="text-align:left">Nested Bro <small>Sep 25, 2015, 8:28 PM</small></h4>
+                  <p>Me too! WOW!</p>
+                  <br>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="empty"></div>
+
+  <!-- 5. 광고 -->
+  <div class="container-fluid text-center bg-grey">
+    <div class="wrapper slideanim">
+      <div id="header">
+        <div id="ad_creative_1" class="ad-div mastad" style="z-index: 1;">
+          <script>(function() {var loaded = function() {return window.yt && yt.www && yt.www.feed && yt.www.feed.ui && yt.www.feed.ui.ads;};window.masthead_ad_creative_iframe_1_workaround = function() {if (loaded()) {yt.www.feed.ui.ads.workaroundIE(this);}};window.masthead_ad_creative_iframe_1_onload = function() {if (!loaded()) {setTimeout(masthead_ad_creative_iframe_1_onload, 50);return;}yt.www.feed.ui.ads.workaroundLoad();};})();</script>
+          <script>(function() {function tagMpuIframe() {var containerEl = document.getElementById('ad_creative_1');if (!containerEl) {return;}var iframeEl = document.createElement('iframe');var iframeSrc = "https:\/\/pubads.g.doubleclick.net\/gampad\/ads?ad_rule=0\u0026d_imp=1\u0026gdfp_req=1\u0026impl=ifr\u0026iu=%2F4061%2Fcom.ythome\u0026pucrd=CgYIABAAGAA\u0026scp=dc_yt%3D1%26kbsg%3DHPKR170616%26kga%3D-1%26kgg%3D-1%26klg%3Den%26kmyd%3Dad_creative_1%26ssl%3D1%26ytdevice%3D1%26ytexp%3D9406127%252C9419452%252C9422596%252C9431012%252C9434289%252C9443913%252C9446054%252C9451827%252C9457023%252C9457115%252C9460073%252C9460350%252C9465813%252C9466139%252C9466593%252C9466778%252C9468051%252C9468422%252C9468961%252C9473191%252C9474360%252C9475258%252C9477035%252C9477468%252C9477839%252C9477995%252C9478166%252C9478277\u0026sz=970x250\u0026ytdevice=1" + '&correlator=' +Math.floor(Math.random() * 10000000000000000);iframeEl.id = 'ad_creative_iframe_1';iframeEl.width = '970';iframeEl.height = '250';iframeEl.style.cssText = 'z-index:1;';iframeEl.onload = window.masthead_ad_creative_iframe_1_onload;iframeEl.onmouseover = window.masthead_ad_creative_iframe_1_workaround;iframeEl.onfocus = window.masthead_ad_creative_iframe_1_workaround;iframeEl.setAttribute('allowFullScreen', '');iframeEl.scrolling = 'no';iframeEl.frameBorder = '0';containerEl.appendChild(iframeEl);iframeEl.src = iframeSrc;}tagMpuIframe();if (window.ytcsi) {window.ytcsi.info("yt_ad", "1", '');}})();</script>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="empty"></div>
+
+
+  <footer class="container-fluid text-center">
+    <a href="#myPage" title="To Top">
+      <span class="glyphicon glyphicon-chevron-up"></span>
+      <p>Top</p>
+    </a>
+    <p>Copyright &copy; 2017 HOX All Rights Reserved</p>
+  </footer>
+
+
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <title>ChuSarang</title>
+    <link rel="stylesheet" href="../css.css">
+    <style>
+      table {
+        width: 80%;
+        margin : auto;
+        font-family : "THESusu";
+        font-size : 20px;
+      }
+      th{
+        background-color :beige;
+      }
+      #gallery ul{margin-left:-30px;}
+  #gallery ul li{
+	list-style-type:none;
+	display:inline-table;
+	padding:10px;
+  }
+  #gallery ul li .pic{
+	-webkit-transition: all 0.4s ease-in-out;
+  	opacity:0;
+  	visibility:hidden;
+  	position:absolute;
+  	margin-top:0px;
+  	margin-left:270px;
+  	border:1px solid black;
+  	-webkit-box-shadow:#272229 2px 2px 10px;
+  	-moz-box-shadow:#272229 2px 2px 10px;
+  	box-shadow:#272229 2px 2px 10px;
+  }
+
+    #gallery ul li .pic1{
+	-webkit-transition: all 0.3s ease-in-out;
+  	opacity:0;
+  	visibility:hidden;
+  	position:absolute;
+  	margin-top:0px;
+  	margin-left:20px;
+  	border:1px solid black;
+  	-webkit-box-shadow:#272229 2px 2px 10px;
+  	-moz-box-shadow:#272229 2px 2px 10px;
+  	box-shadow:#272229 2px 2px 10px;
+  }
+
+  #gallery ul li .pic2{
+	-webkit-transition: all 0.3s ease-in-out;
+  	opacity:0;
+  	visibility:hidden;
+  	position:absolute;
+  	margin-top:0px;
+  	margin-left:-400px;
+  	border:1px solid black;
+  	-webkit-box-shadow:#272229 2px 2px 10px;
+  	-moz-box-shadow:#272229 2px 2px 10px;
+  	box-shadow:#272229 2px 2px 10px;
+  }
+
+
+  #gallery ul li .small:hover{cursor:pointer;}
+  #gallery ul li:hover .pic{
+
+	opacity:1;
+  	visibility:visible;
+	float:right;
+  }
+    #gallery ul li:hover .pic1{
+
+	opacity:1;
+  	visibility:visible;
+	float:right;
+  }
+     #gallery ul li:hover .pic2{
+
+	opacity:1;
+  	visibility:visible;
+	float:right;
+  }
+    </style>
+</head>
+<body class="noajax home">
+    <div class="menu"><a data-effect="effect" class="btnCloseNav" aria-hidden="true"><span class="l1"></span><span class="l2"></span><span class="l3"></span></a></div>
+    <div id="container" class="container effect">
+        <nav class="main_menu effect" role="navigation" aria-label="Site">
+            <span class="close"></span>
+            <ul>
+                <li class="lang-picker" aria-label="Choose a Language">
+                    <a href="#" >Category ∨<span class="lang-arrow"></span></a>
+                    <ul>
+                        <li><a href="morePage_rest.html">Food</a></li>
+                        <li><a href="morePage_fashion.html">Fashion</a></li>
+                        <li><a href="morePage_coding.html">Programming</a></li>
+                        <li><a href="MorePage.html">Competition</a></li>
+                        <li><a href="morePage_tour.html">Travel</a></li>
+                    </ul>
+                </li>
+                <li ><a class="btnAjax" href="../main.html" data-title="" data-url="">Main</a><span class="menu_overlay"></span></li>
+                <li ><a class="btnAjax " href="intro.html" data-title="" data-url="/project">Introduction</a><span class="menu_overlay "></span></li>
+                <li ><a class="btnAjax active" href="port.html" >PortFolio</a><span class="menu_overlay active"></span></li>
+                <li ><a class="btnAjax" href="question.html" rel="external" data-track="Faqs"><span>Question</span></a><span class="menu_overlay"></span></li>
+                <li ><a class="btnAjax" href="contect.html"><span>Contact</span></a><span class="menu_overlay"></span></li>  
+                <li ><img src = "../image/Mark.png" width ="300" height = "130"></a></li>   
+            </ul>
+        </nav>
+
+<div class="pusher">
+    <div class="loadContent current">
+        <div id="content" class="how">
+          <div id="preload" aria-hidden="true"></div>
+            <div class="inner">
+                <header class="title" role="banner">
+                  <div class="browserVersion newBrowser">
+                <h1>ChuSarang</h1>
+                <p>유저들을 위한 맞춤형 추천 사이트</p>
+            </div>
+                </header>
+  <div id="content4">
+    <br><br><br><br><br><br><br><br><br>
+<center>
+    <div id="gallery">
+    <div id = "state">
+        <h1>PortFolio</h1>
+        </div>
+        <br><br><br><br><br><br>
+        <div id = "tt1">
+        <table>
+            <tr>
+                <td><ul><li> &nbsp;  &nbsp; <img src="../image/승수.png"  border="0" alt="" class="pic"><img src="../image/승수.png" width="350" height="400" border="0" alt="" class="small"></li></ul></td>
+                <td><ul><li><img src="../image/영렬.png"  border="0" alt="" class="pic1"><img src="../image/영렬.png" width="350" height="400" border="0" alt="" class="small"></li></ul></td>
+                <td><ul><li><img src="../image/명훈.png"  border="0" alt="" class="pic2"><img src="../image/명훈.png" width="350" height="400" border="0" alt="" class="small"></li></ul></td>
+            </tr>
+        </table>
+        </div>
+        <div id = "tt2">
+		<table>
+      <tbody>
+          <br>
+        <tr>
+          <th><br><br><br><br>Basic Information</th>
+          <td><br> &nbsp; Name : Kim Seung Soo<br><br> &nbsp; Birthday : 1994. 09. 09<br><br> &nbsp; Major : Software in Chung Buk Univ<br><br> &nbsp; Country : South Korea<br><br></td>
+          <th><br><br><br><br>Basic Information</th>
+          <td><br> &nbsp; Name : Kim Young Ryeul<br><br> &nbsp; Birthday : 1993. 02. 26<br><br> &nbsp; Major : Software in Chung Buk Univ<br><br> &nbsp; Country : South Korea<br><br></td>
+          <th><br><br><br><br>Basic Information</th>
+          <td><br> &nbsp; Name : Shim Myung Hun<br><br> &nbsp; Birthday : 1994. 05. 20<br><br> &nbsp; Major : Software in Chung Buk Univ<br><br> &nbsp; Country : South Korea<br><br></td>
+        </tr>
+        <tr> <td> </td><td>&nbsp;</td> </tr>
+        <tr>
+          <th><br><br><br><br>IT Proficiency</th>
+          <td><br><br><br> &nbsp; Advanced level in C/C++<br><br> &nbsp; Linux master 2 (approved by KAIT)<br></td>
+          <th><br><br><br><br>IT Proficiency</th>
+          <td><br> &nbsp; Word Process<br><br> &nbsp; Mos master<br><br> &nbsp; Information processing technician<br><br> &nbsp; Computer literacy<br><br></td>
+          <th><br><br><br><br>IT Proficiency</th>
+          <td><br><br><br><br> &nbsp; Linux master 2 (approved by KAIT)</td>
+        </tr>
+                <tr> <td> </td><td>&nbsp;</td> </tr>
+        <tr>
+          <th><br><br><br>English Proficiency</th>
+          <td><br> &nbsp; TOEIC 775 (approved by YBM)<br><br> &nbsp; OPIC IL (approved ACTFL)<br><br> &nbsp; English Communication intermediate<br><br></td>
+          <th><br><br><br>English Proficiency</th>
+          <td><br><br><br> &nbsp; TOEIC 615 (approved by YBM)</td>
+          <th><br><br><br>English Proficiency</th>
+          <td><br><br><br> &nbsp; TOEIC 700 (approved by YBM)</td>
+        </tr>
+      </tbody>
+    </table>
+        
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+    </div>
+    <script src="http://outdatedbrowser.com/public/scripts/jquery-1.10.1.min.js"></script>
+    <script src="http://outdatedbrowser.com/public/scripts/outdatedBrowser.min.js"></script>
+    <script src="http://outdatedbrowser.com/public/scripts/xDomainRequest.js"></script>
+      <script type="text/javascript" src="http://outdatedbrowser.com/public/scripts/main.min.js"></script>
+
+    </body>
+</html>
